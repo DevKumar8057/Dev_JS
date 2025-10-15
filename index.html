@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <p id="demo"></p>
+
+    <button onclick="document.getElementById('myImage').src='bulb on.jpg'">Turn On The Bulb</button>
+    <img src="bulb off.jpg" id="myImage" style="height: 100px;">
+
+    <button onclick="document.getElementById('myImage').src='bulb off.jpg'">Turn Off The Bulb</button>
+
+
+    <script>
+
+        document.getElementById("demo").innerHTML="Hello JavaScript!";
+
+
+    </script>
 </body>
 </html>
