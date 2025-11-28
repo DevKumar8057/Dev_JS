@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="mycanvas" width="400" height="400" style="border: 1px solid #000000;">
+
+    </canvas>
+
+    <script>
+// step 1 access the canva
+let  canvas=document.getElementById("mycanvas");
+
+// step 2 get the data / context
+let ctx=canvas.getcontext("2d");
+
+// step 3 draw something 
+ctx.fillStyle="green";
+ctx.fillRect(10,10,100,50);
+
+ctx.fillStyle="red";
+ctx.fillText("hello world",100,200);
+    </script>
+
+
+
+</body>
+</html>

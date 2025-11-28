@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas id="mycanvas" width="400" height="400" style="border: 1px solid #000000;">
+
+    </canvas>
+
+    <script>
+let  canvas=document.getElementById("mycanvas");
+let ctx=canvas.getcontext("2d");
+
+let x=20;
+let y=150;
+
+let dx=2;  // dx for define speed of ball in x
+
+
+function draw(){
+    ctx.clearReact(0,0,canvas.width,canvas.height);  //clear canvas
+    ctx.beginPath();
+    ctx.arc(x,y,15,0,Math.PI*2);  // draw the ball
+
+    ctx.fillStyle="blue";
+    ctx.fill();
+    ctx.closePath();
+
+    x+=dx;
+    if(x>canvas.width-20||x<20){
+        dx=-dx;  //reverese the direction
+    }
+setInterval(draw,10); //call draw function every 10 millisecond
+
+}
+
+
+    </script>
+
+
+
+</body>
+</html>
